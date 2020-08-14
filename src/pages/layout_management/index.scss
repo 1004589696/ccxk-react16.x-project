@@ -1,0 +1,111 @@
+.layout-header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 6px 12px 1px rgba(42, 54, 70, 0.09);
+    display: flex;
+    align-items: center;
+
+    .layout-header-logo {
+        flex: 1;
+
+        img {
+            height: 44px;
+            padding: 0 20px;
+        }
+    }
+
+    .layout-header-right {
+        height: 32px;
+
+        .color51 {
+            color: #333;
+            cursor: default;
+        }
+    }
+}
+
+.layout-asider {
+    position: fixed;
+    z-index: 1;
+    top: 52px;
+    bottom: 0;
+    left: 0;
+    width: 147px;
+    background: rgba(42, 54, 70, 1);
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .ant-menu {
+        border: none;
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0.5);
+
+        .anticon {
+            margin-right: 5px;
+        }
+
+        .ant-menu-submenu-title {
+            padding-right: 24px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .ant-menu-submenu-title .ant-menu-submenu-arrow {
+            right: 10px;
+        }
+
+        .ant-menu-item-selected {
+            color: rgba(255, 255, 255, 1);
+            background-color: transparent;
+        }
+
+        .ant-menu-submenu-title:hover,
+        .ant-menu-item:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .ant-menu-submenu-arrow::before,
+        .ant-menu-submenu-arrow::after {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+        }
+
+        .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+        .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after {
+            background: linear-gradient(to right, #fff, #fff);
+        }
+
+        .ant-menu-item:active,
+        .ant-menu-submenu-title:active {
+            background-color: transparent;
+        }
+
+        .ant-menu-item-selected::after {
+            opacity: 0;
+        }
+
+        .ant-menu-submenu-title,
+        .ant-menu-item {
+            padding-left: 12px !important;
+        }
+
+        .ant-menu-sub>.ant-menu-item {
+            padding-left: 24px !important;
+        }
+    }
+}
+
+.layout-asider::-webkit-scrollbar {
+    width: 0;
+}
+
+.layout-main {
+    margin-left: 147px;
+    padding: 62px 10px 10px 10px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: rgba(241, 242, 245, 1);
+}

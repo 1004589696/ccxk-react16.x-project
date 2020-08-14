@@ -298,6 +298,7 @@ module.exports = function(webpackEnv) {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         ...(modules.webpackAliases || {}),
+        '@': path.join(__dirname, '../src') //这样，@ 就表示 项目根目录中的src 这一层路径
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
