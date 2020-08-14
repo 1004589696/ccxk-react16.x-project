@@ -1,14 +1,23 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import Pager from "@/components/Pager/Pager.js";
 
-export default class Lifecycle extends Component {
+class Lifecycle extends Component {
   render() {
     return (
       <div>
+        <Pager />
         <Life name="d" title="sd" />
       </div>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return state;
+};
+
+export default connect(mapStateToProps)(Lifecycle);
 
 class Life extends Component {
   // 生命周期介绍
@@ -28,8 +37,6 @@ class Life extends Component {
   // 11、componentWillUnmount()
 
   render() {
-    console.log(this.props);
-    console.log(this.state);
     return (
       <div>
         <p>react生命周期</p>

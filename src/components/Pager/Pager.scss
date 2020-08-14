@@ -1,0 +1,51 @@
+.qfy-form {
+    padding: 0 20px;
+
+    .ant-row.ant-form-item {
+        padding-top: 20px;
+    }
+
+    .qfy-range-date {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        display: inline-block;
+        width: 300px;
+
+        .ant-picker-input {
+            background-color: #fff;
+            border: 1px solid #d9d9d9;
+            padding: 4px 11px;
+            width: 46%;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .ant-picker-range-separator {
+            line-height: 32px;
+            width: 8%;
+            text-align: center;
+            display: inline-block;
+            padding: 0;
+        }
+
+        .ant-picker-suffix {
+            display: none;
+        }
+
+    }
+
+    .qfy-range-date.ant-picker-range.ant-picker-focused {
+
+        .ant-picker-active-bar {
+            display: none;
+        }
+    }
+}
+
+.my-pager.ant-pagination {
+    padding: 20px;
+    text-align: right;
+}
